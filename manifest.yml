@@ -1,0 +1,15 @@
+applications:
+- path: .
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: SIO-INDUSTRIAL
+  host: SIO-INDUSTRIAL
+  disk_quota: 1024M
+  services:
+  - XPages NoSQL Database-na
+  env:
+    APP_HOME_URL: /application.nsf
+    APP_PRELOAD_DB: application.nsf
+  buildpack: xpages_buildpack
+  command: /app/launch_xpages_webcontainer
